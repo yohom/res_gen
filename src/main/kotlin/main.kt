@@ -17,15 +17,14 @@ fun main(args: Array<String>) {
                     nameWithoutSuffix = "${nameWithoutSuffix}_"
                 }
                 result.append("  /// ![preview](file://${it.absolutePath})\n")
-                val folder = if (suffix.endsWith("png", true) || suffix.endsWith("jpg", true)) "images" else "fonts"
-                result.append("  final ${nameWithoutSuffix.camel2Underscore()} = '$folder/${it.name}';\n\n")
+                result.append("  final ${nameWithoutSuffix.camel2Underscore()} = '${it.toRelativeString(File("."))}';\n\n")
             }
         }
     }
 
     result.append("}")
 
-    val targetFile = File("lib/src/resource/drawables.dart")
+    val targetFile = File("component_ui/lib/src/resource/drawables.dart")
     if (!targetFile.exists()) {
         targetFile.createNewFile()
     }
