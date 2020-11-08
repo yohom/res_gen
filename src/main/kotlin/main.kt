@@ -24,7 +24,8 @@ fun main(args: Array<String>) {
 
     result.append("}")
 
-    val targetFile = File("${if (args.last() == "-m") "component_ui/" else ""}lib/src/resource/drawables.dart")
+//    val targetFile = File("${if (args.last() == "-m") "component_ui/" else ""}lib/src/resource/drawables.dart")
+    val targetFile = File("component_ui/lib/src/resource/drawables.dart")
     if (!targetFile.exists()) {
         targetFile.createNewFile()
     }
