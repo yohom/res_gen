@@ -17,7 +17,14 @@ fun main(args: Array<String>) {
                     nameWithoutSuffix = "${nameWithoutSuffix}_"
                 }
                 result.append("  /// ![preview](file://${it.absolutePath})\n")
-                val folder = if (suffix.endsWith("png", true) || suffix.endsWith("jpg", true)) "images" else "fonts"
+                val folder = if (
+                    suffix.endsWith("png", true)
+                    || suffix.endsWith("jpg", true)
+                    || suffix.endsWith("webp", true)
+                )
+                    "images"
+                else
+                    "fonts"
                 result.append("  final ${nameWithoutSuffix.camel2Underscore()} = '$folder/${it.name}';\n\n")
             }
         }
@@ -45,7 +52,7 @@ val reserved = listOf(
     "while", "deferred", "hide", "return", "with", "do", "if", "set", "yield"
 )
 
-val fileExtension = listOf("png", "svg", "jpg")
+val fileExtension = listOf("png", "svg", "jpg", "webp")
 
 /**
  * 下划线风格转为驼峰风格, [capitalized]表示转换后首字母是否大写
