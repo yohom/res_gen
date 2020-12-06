@@ -21,6 +21,7 @@ fun main(args: Array<String>) {
                     suffix.endsWith("png", true)
                     || suffix.endsWith("jpg", true)
                     || suffix.endsWith("webp", true)
+                    || suffix.endsWith("gif", true)
                 )
                     "images"
                 else
