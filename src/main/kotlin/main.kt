@@ -53,7 +53,7 @@ val reserved = listOf(
     "while", "deferred", "hide", "return", "with", "do", "if", "set", "yield"
 )
 
-val fileExtension = listOf("png", "svg", "jpg", "webp")
+val fileExtension = listOf("png", "svg", "jpg", "webp", "gif")
 
 /**
  * 下划线风格转为驼峰风格, [capitalized]表示转换后首字母是否大写
