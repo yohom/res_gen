@@ -26,7 +26,7 @@ fun main(args: Array<String>) {
                     "images"
                 else
                     "fonts"
-                result.append("  final ${nameWithoutSuffix.camel2Underscore()} = '$folder/${it.name}';\n\n")
+                result.append("  final String ${nameWithoutSuffix.camel2Underscore()} = '$folder/${it.name}';\n\n")
             }
         }
     }
