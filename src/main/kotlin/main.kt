@@ -23,9 +23,9 @@ fun main(args: Array<String>) {
                     || suffix.endsWith("webp", true)
                     || suffix.endsWith("gif", true)
                 )
-                    "images"
+                    "assets/images"
                 else
-                    "fonts"
+                    "assets/fonts"
                 result.append("  final String ${nameWithoutSuffix.camel2Underscore()} = '$folder/${it.name}';\n\n")
             }
         }
