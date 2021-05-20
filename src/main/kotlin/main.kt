@@ -1,7 +1,7 @@
 import java.io.File
 
 fun main(args: Array<String>) {
-    val result = StringBuilder("part of 'R.dart';\n\n")
+    val result = StringBuilder("part of 'r.dart';\n\n")
 
     result.append("// ignore_for_file: non_constant_identifier_names\n")
     result.append("class _DrawableReference {\n")
